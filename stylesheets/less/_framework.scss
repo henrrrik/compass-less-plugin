@@ -30,6 +30,16 @@ $less-font-family: Arial, sans-serif !default;
   }
 }
 
+@mixin pull($columns) {
+  left: -((68px * $columns) + (24px * ($columns - 1)) + 24px);
+  position: relative;
+}
+
+@mixin push($columns) {
+  left: (68px * $columns) + (24px * ($columns - 1)) + 24px;
+  position: relative;
+}
+
 @mixin selection-color($color: unquote("rgb(255,255,158)")) {
   ::selection {background: #{$color};}
   ::-moz-selection {background: #{$color};}
